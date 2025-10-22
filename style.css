@@ -1,0 +1,330 @@
+/* GERAIS E RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f8f8;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #C00; /* Vermelho forte, remetendo ao NAVES da logo */
+}
+
+a:hover {
+    color: #800;
+}
+
+.section-padding {
+    padding: 60px 0;
+}
+
+h1, h2, h3 {
+    margin-bottom: 20px;
+    color: #C00; 
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.2em;
+    margin-bottom: 40px;
+}
+
+/* 1. CABEÇALHO E NAVEGAÇÃO */
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.logo {
+    font-size: 2em;
+    font-weight: bold;
+    color: #C00;
+}
+
+nav a {
+    margin-left: 25px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.menu-toggle {
+    display: none; /* Ocultar por padrão em telas maiores */
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+/* 2. BANNER / DESTAQUE PRINCIPAL */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('placeholder-pastel-bg.jpg') no-repeat center center/cover; /* Imagem de fundo opcional */
+    color: #fff;
+    text-align: center;
+    padding: 150px 0;
+}
+
+.hero h1 {
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.hero h2 {
+    font-size: 1.5em;
+    margin-bottom: 40px;
+    color: #fff;
+}
+
+.btn-primary, .btn-whatsapp {
+    display: inline-block;
+    background-color: #C00;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #E00;
+}
+
+.btn-whatsapp {
+    background-color: #25D366;
+    margin-top: 15px;
+}
+
+.btn-whatsapp:hover {
+    background-color: #1EBE59;
+}
+
+/* 4. NOSSO PRODUTO */
+.produto-bg {
+    background-color: #eee;
+}
+
+.produto-card {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.produto-card img {
+    max-width: 300px; /* Adapte ao tamanho da sua imagem da embalagem */
+    height: auto;
+    border-radius: 5px;
+}
+
+.produto-info h3 {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+/* 5. QUALIDADE E SEGURANÇA */
+.qualidade-itens {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.qualidade-item {
+    text-align: center;
+    max-width: 30%;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.qualidade-item i {
+    font-size: 3em;
+    color: #4CAF50; /* Verde para segurança */
+    margin-bottom: 15px;
+}
+
+.nota-qualidade {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0.9em;
+    color: #777;
+}
+
+/* 6. NOSSA FUNDADORA */
+.fundadora-bg {
+    background-color: #f0f0f0;
+}
+
+.fundadora-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    text-align: left;
+}
+
+.fundadora-info {
+    flex: 1;
+}
+
+.fundadora-caricatura {
+    text-align: center;
+    max-width: 300px;
+    border: 3px solid #333; /* Simular o vetor P&B */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.fundadora-caricatura img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.fundadora-caricatura p {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* 7. FALE CONOSCO / CONTATO */
+.contato-bg {
+    background-color: #fff;
+    text-align: center;
+}
+
+.contato-info p {
+    margin: 10px 0;
+    font-size: 1.1em;
+}
+
+.redes-sociais {
+    margin-top: 40px;
+}
+
+.redes-sociais h3 {
+    margin-bottom: 15px;
+}
+
+.social-icon {
+    font-size: 2em;
+    margin: 0 10px;
+    color: #3b5998; /* Cor do Facebook */
+    transition: opacity 0.3s;
+}
+
+.social-icon.disabled {
+    color: #aaa;
+    cursor: default;
+    opacity: 0.5;
+}
+
+.social-icon:hover:not(.disabled) {
+    opacity: 0.8;
+}
+
+.social-icon:nth-child(3) { /* Instagram */
+    color: #E1306C;
+}
+
+.nota-social {
+    margin-top: 15px;
+    font-size: 0.9em;
+    color: #777;
+}
+
+/* 8. RODAPÉ */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9em;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* RESPONSIVIDADE (MEDIA QUERIES) */
+@media (max-width: 900px) {
+    .produto-card, .fundadora-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .produto-card img {
+        max-width: 80%;
+    }
+
+    .qualidade-itens {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .qualidade-item {
+        max-width: 100%;
+    }
+
+    .fundadora-caricatura {
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Menu Mobile */
+    nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Altura do header */
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    nav a {
+        margin: 0;
+        padding: 15px 20px;
+        border-bottom: 1px solid #eee;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .hero {
+        padding: 100px 0;
+    }
+
+    .hero h1 {
+        font-size: 2.5em;
+    }
+}
